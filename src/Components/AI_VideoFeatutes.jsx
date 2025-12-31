@@ -2,35 +2,14 @@ import React, { useState } from "react";
 import { FiPlus, FiX } from "react-icons/fi";
 import SampleVideo from "../assets/Next_Level_Videos/AI_Video_1.mp4";
 import { FaMinus } from "react-icons/fa";
+import { items } from "../DB/AI_Video_Features/AIVideoFeatures";
 
 
 const AIVideoFeatures = () => {
   
   const [openIndex, setOpenIndex] = useState(null);
 
-  const items = [
-      {
-        title: "100+ trained creators",
-        desc: "Work with a curated network of skilled creators who understand brand guidelines, storytelling, and campaign goals.",
-        button: "Translate With AI",
-      },
-      {
-        title: "Fast turnarounds",
-        desc: "AI-assisted workflows and streamlined collaboration help us deliver videos quickly—without compromising quality.",
-        button: "Find answers with AI",
-      },
-      {
-        title: "Scalable creator videos",
-        desc: "Need 5 videos or 500? Our creator ecosystem scales effortlessly to match your campaign size and timeline.",
-        button: "Edit video by text",
-      },
-      {
-        title: "Brand-safe content delivery",
-        desc: "Every video follows strict brand, quality, and compliance standards—so your message stays consistent and safe.",
-        button: "Auto-generate the details",
-      },
-  ];
-
+  
   return (
 
       <section className="w-full bg-[#0f1317] text-white py-24 px-6 lg:px-20 2xl:px-90 flex flex-col lg:flex-row gap-16">

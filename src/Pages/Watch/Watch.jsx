@@ -3,6 +3,8 @@ import Sidebar from "./Sidebar";
 import NavbarWatch from "./Navbar_watch";
 import HeroSlider from "./Hero_slider";
 import VideoGrid from "./Video_Grid";
+import { Navbar } from "../../Components/Navbar";
+import { Footer } from "../../Components/Footer";
 
 export const Watch = () => {
 
@@ -20,21 +22,21 @@ export const Watch = () => {
   const toggleSidebar = () => setSidebarOpen(prev => !prev);
 
   return (
-    <div className="w-full flex bg-[#f6f8fa]">
+    <div className="w-full flex ">
 
       {/* SIDEBAR */}
-      {/* <Sidebar sidebarOpen={sidebarOpen} /> */}
-      <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+      {/* <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} /> */}
 
       {/* RIGHT PAGE SECTION */}
-      <div className={`flex-1 transition-all duration-300 ${sidebarOpen ? "ml-64" : "ml-9"}`}>
+      <div className={`flex-1 transition-all duration-300 `}>
 
 
         <div className={`transition-all duration-300 px-1 `}>
             {/* ${sidebarOpen ? "-ml-10" : "ml-12"} */}
 
             {/* NAVBAR */}
-            <NavbarWatch  toggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
+            {/* <NavbarWatch  toggleSidebar={() => setSidebarOpen(!sidebarOpen)} /> */}
+            <Navbar   toggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
             {/* <NavbarWatch toggleSidebar={toggleSidebar} sidebarOpen={sidebarOpen} /> */}
 
         </div>    
@@ -42,9 +44,9 @@ export const Watch = () => {
         {/* HERO BANNER WITH SLIDER CONTROLS */} 
 
         {/* ${sidebarOpen ? "-ml-6" : "ml-12"} */}
-        <div className={`transition-all duration-300 px-2 `}>
+        {/* <div className={`transition-all duration-300 px-2 `}>
           <HeroSlider />
-        </div>
+        </div> */}
 
         {/* <div className={`${sidebarOpen && window.innerWidth < 768 ? "hidden" : ""}`}>
            <HeroSlider />
@@ -59,7 +61,11 @@ export const Watch = () => {
         <div className={`transition-all duration-300 `}>
           {/* ${sidebarOpen ? "-ml-4" : "ml-12"} */}
           <VideoGrid />
-      </div>
+        </div>
+
+        <div>
+          <Footer />
+        </div>
 
 
       </div>
